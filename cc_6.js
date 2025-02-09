@@ -87,5 +87,21 @@ function applyBulkDiscount(orders, discountFunction) {
 applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount);
 // Expected output: [200, 540, 1080, 450, 720]
 
-// Created a high-rder function that applies a 10% discount given that the price is over a certain $ value
+// Created a high-order function that applies a 10% discount given that the price is over a certain $ value
 
+
+// Task 7: Business Exepnse Tracker
+
+function createExpenseTracker() {
+    let totalExpenses = 0;
+    return function(amount) {
+        totalExpenses += amount;
+        console.log(`Total Expenses: $${totalExpenses}`);
+    };
+}
+
+let tracker = createExpenseTracker();
+tracker(200); // Expected output: "Total Expenses: $200"
+tracker(150); // Expected output: "Total Expenses: $350"
+
+// Created an expense tracker which is a function that returns another function to add expenses and has a running total 
