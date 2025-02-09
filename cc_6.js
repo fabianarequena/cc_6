@@ -60,3 +60,17 @@ calculateSubscriptionCost("Basic", 6, 10); // Expected output: "Total Cost: $50"
 calculateSubscriptionCost("Premium", 12, 0); // Expected output: "Total Cost: $240"
 
 // Created a function with 3 parameters  to calculate a reocurring cost with different package options
+
+
+// Task 5: Currency Conversion
+
+function convertCurrency(amount, exchangeRate) {
+    let convertedAmount = amount * exchangeRate;
+    console.log(`Converted Amount: $${convertedAmount.toFixed(2)}`);
+}
+
+convertCurrency(100, 1.1); // Expected output: "Converted Amount: $110.00"
+convertCurrency(250, 0.85); // Expected output: "Converted Amount: $212.50"
+
+// Created a function to convert currency given two parameters 
+
