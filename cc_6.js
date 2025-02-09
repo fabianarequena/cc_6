@@ -27,19 +27,14 @@ calculateSalesTax(500, 0.1);  // Expected output: "Sales Tax: $50"
 
 // Task 3: Employee Bonus Calculation
 
-const calculateBonus = (salary, performanceRating) => {
-    let bonus = 0;
+const calculateBonus = (salary, performanceRating) => 
+    performanceRating === "Excellent" ? salary * 0.2 :
+    performanceRating === "Good" ? salary * 0.1 :
+    performanceRating === "Average" ? salary * 0.05 :
+    0;
 
-    if (performanceRating === "Excellent") {
-        bonus = salary * 0.2;
-    } else if (performanceRating === "Good") {
-        bonus = salary * 0.1;
-    } else if (performanceRating === "Average") {
-        bonus = salary * 0.05;
-    }
-
-    console.log(`Bonus: $${bonus}`);
-};
+console.log(`Bonus: $${calculateBonus(5000, "Excellent")}`); // "Bonus: $1000"
+console.log(`Bonus: $${calculateBonus(7000, "Good")}`); // "Bonus: $700"
 
 calculateBonus(5000, "Excellent"); // Expected output: "Bonus: $1000"
 calculateBonus(7000, "Good");      // Expected output: "Bonus: $700"
